@@ -63,8 +63,7 @@ int * convert_binary_to_hexadecimal(const int binary_array[]) {
     int index_slot_bin; int index_bin_array=0; int index_hex_array = 0;
 
 	//convert array from binary to hexadecimal
-	while(index_bin_array < 32)
-	{
+	while(index_bin_array < 32) {
 		for(index_slot_bin=0; index_slot_bin < 4; index_slot_bin++, index_bin_array++)
 		    hexadecimal_array[index_hex_array] = hexadecimal_array[index_hex_array] + (binary_array[index_bin_array] * pow(2, 3 - index_slot_bin));
 		
