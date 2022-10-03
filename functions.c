@@ -266,7 +266,6 @@ int * convert_hexadecimal_to_binary(const int hexadecimal_array[]) {
     }
 
     return binary_array;
-
 }
 
 
