@@ -20,7 +20,7 @@ int * insert_binary_number(char * binary_array_str) {
     //verify input
 
     if(strlen(binary_array_str) > 32 || strlen(binary_array_str) < 0){
-        printf("\nInput not valid, try again...\n");
+        printf("\nInput not valid, restart program...\n");
         exit(0);
     }
 
@@ -32,7 +32,7 @@ int * insert_binary_number(char * binary_array_str) {
     }
 
     if(flag == true){
-        printf("\nInput not valid, try again...\n");
+        printf("\nInput not valid, restart program...\n");
         exit(0);
     }
 
@@ -184,7 +184,7 @@ int * insert_hexadecimal_number(char * hexadecimal_array_str) {
     //verify input
 
     if(strlen(hexadecimal_array_str) > 8 || strlen(hexadecimal_array_str) < 0){
-        printf("\nInput not valid, try again...\n");
+        printf("\nInput not valid, restart program...\n");
         exit(0);
     }
 
@@ -197,7 +197,7 @@ int * insert_hexadecimal_number(char * hexadecimal_array_str) {
     }
 
     if(flag == true){
-        printf("\nInput not valid, try again...\n");
+        printf("\nInput not valid, restart program...\n");
         exit(0);
     }
 
