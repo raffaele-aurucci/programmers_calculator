@@ -97,7 +97,7 @@ int * convert_binary_to_hexadecimal(const int binary_array[]) {
 
     int index_slot_bin; int index_bin_array=0; int index_hex_array = 0;
 
-	//convert array from binary to hexadecimal
+
 	while(index_bin_array < 32) {
 		for(index_slot_bin=0; index_slot_bin < 4; index_slot_bin++, index_bin_array++)
 		    hexadecimal_array[index_hex_array] = hexadecimal_array[index_hex_array] + (binary_array[index_bin_array] * pow(2, 3 - index_slot_bin));
@@ -125,25 +125,25 @@ long unsigned int insert_decimal_number() {
 
 int * convert_decimal_to_binary(long unsigned int decimal_number) {
 
-    int i = 0, *binaryArray, tmp;
+    int i = 0, *binary_array, tmp;
     long unsigned int copy_decimal_number = decimal_number;
 
-	binaryArray = calloc(32, sizeof(int));
+    binary_array = calloc(32, sizeof(int));
 
 	while(copy_decimal_number > 0) {
-	    binaryArray[i] = copy_decimal_number % 2;
+        binary_array[i] = copy_decimal_number % 2;
         copy_decimal_number = copy_decimal_number / 2;
 	    i++;
 	}
 
 	//invert the order of elements in binary_array
 	for(i = 0; i < 16; i++) {
-	    tmp = binaryArray[i];
-        binaryArray[i] = binaryArray[31 - i];
-        binaryArray[31 - i] = tmp;
+	    tmp = binary_array[i];
+        binary_array[i] = binary_array[31 - i];
+        binary_array[31 - i] = tmp;
 	}
 
-    return binaryArray;
+    return binary_array;
 }
 
 
