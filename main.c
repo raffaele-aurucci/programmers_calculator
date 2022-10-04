@@ -40,7 +40,7 @@ int main(void) {
             case 'H': case 'h':
                 hexadecimal_array = insert_hexadecimal_number();
                 binary_array = convert_hexadecimal_to_binary(hexadecimal_array);
-                decimal_number = convert_binary_to_decimal(binary_array);
+                decimal_number = convert_hexadecimal_to_decimal(hexadecimal_array);
                 show_binary_array(binary_array);
                 show_decimal_number(decimal_number);
                 show_hexadecimal_array(hexadecimal_array);

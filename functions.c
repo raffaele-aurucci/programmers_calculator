@@ -288,8 +288,17 @@ int * convert_hexadecimal_to_binary(const int hexadecimal_array[]) {
 
 long unsigned int convert_hexadecimal_to_decimal(const int hexadecimal_array[]){
 
+    long unsigned int decimal_number = 0;
+
+    for(int i = 1; i <= 8; i++){
+        decimal_number = decimal_number + (hexadecimal_array[i-1] * pow(16, 8 - i));
+    }
+
+    return decimal_number;
 }
 
+
+/* output formatting */
 
 void show_binary_array(const int binary_array[]){
 
