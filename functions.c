@@ -13,22 +13,22 @@ int * insert_binary_number(void) {
 
     binary_array = calloc(32, sizeof(int));
 
-    do {
-        printf("\nHow many bits do you want to insert? (max 32): ");
-        scanf("%d", &number_of_bit);
-
-        if(number_of_bit < 0 || number_of_bit > 32)
-            printf("\nInput not valid, try again...");
-
-    } while (number_of_bit < 0 || number_of_bit > 32);
-
-
-    int i;
-
-	for(i = 0; i < number_of_bit; i++) {
-        printf("\nInsert bit in position %d: ", i);
-        scanf("%d", &binary_array[i]);
-	}
+//    do {
+//        printf("\nHow many bits do you want to insert? (max 32): ");
+//        scanf("%d", &number_of_bit);
+//
+//        if(number_of_bit < 0 || number_of_bit > 32)
+//            printf("\nInput not valid, try again...");
+//
+//    } while (number_of_bit < 0 || number_of_bit > 32);
+//
+//
+//    int i;
+//
+//	for(i = 0; i < number_of_bit; i++) {
+//        printf("\nInsert bit in position %d: ", i);
+//        scanf("%d", &binary_array[i]);
+//	}
 	
 	//invert the order of elements in binary_array
 	for(i = 0; i < 16; i++) {
