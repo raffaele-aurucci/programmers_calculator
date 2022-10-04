@@ -6,8 +6,10 @@ int main(void) {
 
     char choose;
     int *binary_array = calloc(32, sizeof(int));
-    long unsigned int decimal_number;
     int *hexadecimal_array = calloc(8, sizeof(int));
+    long unsigned int decimal_number;
+
+    char binary_array_str[33], hex_array_str[9];
 
     printf("\nWhat type of conversion do you want to do?\n\n");
     printf("Binary\t\t--->\t   Decimal\t--->\tHexadecimal\t(Insert B/b)\n");
@@ -20,9 +22,13 @@ int main(void) {
 
         switch(choose) {
             case 'B': case 'b':
-                binary_array = insert_binary_number();
+                printf("\nInsert binary number (max 32 bits): ");
+                scanf("%s", binary_array_str);
+
+                binary_array = insert_binary_number(binary_array_str);
                 decimal_number = convert_binary_to_decimal(binary_array);
                 hexadecimal_array = convert_binary_to_hexadecimal(binary_array);
+
                 show_binary_array(binary_array);
                 show_decimal_number(decimal_number);
                 show_hexadecimal_array(hexadecimal_array);
@@ -30,24 +36,30 @@ int main(void) {
 
             case 'D': case 'd':
                 decimal_number = insert_decimal_number();
+
                 binary_array = convert_decimal_to_binary(decimal_number);
                 hexadecimal_array = convert_decimal_to_hexadecimal(decimal_number);
+
                 show_binary_array(binary_array);
                 show_decimal_number(decimal_number);
                 show_hexadecimal_array(hexadecimal_array);
             break;
 
             case 'H': case 'h':
-                hexadecimal_array = insert_hexadecimal_number();
+                printf("\nInsert hexadecimal number (max 8 cipher): ");
+                scanf("%s", hex_array_str);
+
+                hexadecimal_array = insert_hexadecimal_number(hex_array_str);
                 binary_array = convert_hexadecimal_to_binary(hexadecimal_array);
                 decimal_number = convert_hexadecimal_to_decimal(hexadecimal_array);
+
                 show_binary_array(binary_array);
                 show_decimal_number(decimal_number);
                 show_hexadecimal_array(hexadecimal_array);
             break;
 
             default:
-                printf("Input not valid, try again...\n");
+                printf("\nInput not valid, try again...\n");
             break;
         }
 

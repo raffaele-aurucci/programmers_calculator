@@ -1,6 +1,6 @@
-int * insert_binary_number(void);
+int * insert_binary_number(char * binary_array_str);
 long unsigned int insert_decimal_number(void);
-int * insert_hexadecimal_number(void);
+int * insert_hexadecimal_number(char * hexadecimal_array_str);
 
 int * convert_binary_to_hexadecimal(const int binary_array[]);
 long unsigned int convert_binary_to_decimal(const int binary_array[]);
