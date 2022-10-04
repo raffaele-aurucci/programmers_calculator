@@ -114,6 +114,24 @@ int * convert_decimal_to_binary(long unsigned int decimal_number) {
 
 int * convert_decimal_to_hexadecimal(long unsigned int decimal_number){
 
+    int * hexadecimal_array, i = 0, tmp;
+
+    hexadecimal_array = calloc(8, sizeof(int));
+
+    while (decimal_number > 0){
+        hexadecimal_array[i] = decimal_number % 16;
+        decimal_number = decimal_number / 16;
+        i++;
+    }
+
+    //invert the order of element in hexadecimal array
+    for(i = 0; i < 4; i++){
+        tmp = hexadecimal_array[i];
+        hexadecimal_array[i] = hexadecimal_array[7 - i];
+        hexadecimal_array[7 - i] = tmp;
+    }
+
+    return hexadecimal_array;
 }
 
 

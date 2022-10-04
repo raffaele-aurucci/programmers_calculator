@@ -31,8 +31,7 @@ int main(void) {
             case 'D': case 'd':
                 decimal_number = insert_decimal_number();
                 binary_array = convert_decimal_to_binary(decimal_number);
-//                hexadecimal_array = convert_decimal_to_hexadecimal(decimal_number);
-                hexadecimal_array = convert_binary_to_hexadecimal(binary_array);
+                hexadecimal_array = convert_decimal_to_hexadecimal(decimal_number);
                 show_binary_array(binary_array);
                 show_decimal_number(decimal_number);
                 show_hexadecimal_array(hexadecimal_array);
